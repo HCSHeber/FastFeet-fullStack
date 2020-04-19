@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
 
 
   * {
@@ -17,6 +19,7 @@ export default createGlobalStyle`
 
   html, body, #root {
     height: 100%;
+    color: #444444;
   }
 
   body {
@@ -29,6 +32,7 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: #999999;
   }
 
   ul {
@@ -36,6 +40,8 @@ export default createGlobalStyle`
   }
 
   button {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
   }
 `;
