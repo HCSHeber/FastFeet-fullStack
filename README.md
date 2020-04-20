@@ -15,28 +15,33 @@
 ---
 
 ### :floppy_disk: Base de dados
-<p>Inicie as imagens do PostgreSQL e do Redis utilizando o docker:<p>
+<p>Inicie os containers com as imagens do PostgreSQL e do Redis utilizando o docker:<p>
 
 ```bash
  # Inicia a maquina virtual do docker, se ainda não estiver iniciada
  docker-machine start
  
- # Instala a imagem do PostgreSQL
+ # Cria um container do PostgreSQL
  docker run --name fastfeetdb -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
  
- # Instala a imagem do Redis
+ # Cria um container do Redis
  docker run --name fastfeetredis -p 6379:6379 -d -t redis:alpine
 ```
 
 ***
 
 ### :postbox: Backend
-<p>Dentro da pasta backend, execute:</p>
+<p>Dentro da pasta <b>backend</b>, execute:</p>
 
 ```bash
  # Instala todas as dependências
  yarn
- 
+```
+<p>Antes dos próximos passos, é necssario criar e configurar o arquivo <i>.env</i> seguindo o <i>.env.example</i></p>
+
+<p>Continuando... :</p>
+
+```bash
  # Envia as migrations para o banco de dados
  yarn sequelize db:migrate
  
@@ -53,7 +58,7 @@
 ***
 
 ### :computer: Web
-<p>Dentro da pasta web, execute:</p>
+<p>Dentro da pasta <b>web</b>, execute:</p>
 
 ```bash
  # Instala todas as dependências
@@ -66,7 +71,7 @@
 ***
 
 ### :iphone: Mobile (Android)
-<p>Dentro da pasta mobile, execute:</p>
+<p>Dentro da pasta <b>mobile</b>, execute:</p>
 
 ```bash
  # Instala todas as dependências
