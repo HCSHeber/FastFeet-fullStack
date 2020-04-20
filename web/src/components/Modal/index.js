@@ -56,7 +56,9 @@ export default function ModalComponent() {
               </p>
             </div>
             <h4>assinatura do destinatário</h4>
-            <img src={modal.data.signature.url} alt="signature" />
+            {modal.data.end_date ? (
+              <img src={modal.data.signature.url} alt="signature" />
+            ) : null}
           </>
         ) : null}
       </Container>
